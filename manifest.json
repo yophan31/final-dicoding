@@ -1,11 +1,11 @@
 {
-  "name": "JejakCerita App",
-  "short_name": "JejakCerita",
-  "description": "Platform berbagi kisah dan peta momen lokasi dengan dukungan offline PWA",
+  "name": "Dicoding Story App",
+  "short_name": "StoryApp",
+  "description": "Aplikasi berbagi cerita dengan peta interaktif, push notification, dan dukungan offline PWA",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#f8fafc",
-  "theme_color": "#0f766e",
+  "background_color": "#ffffff",
+  "theme_color": "#007bff",
   "icons": [
     {
       "src": "icons/icon-192x192.png",
@@ -32,21 +32,21 @@
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "Tampilan Desktop JejakCerita App"
+      "label": "Tampilan Desktop Dicoding Story App"
     },
     {
       "src": "screenshots/screenshot-mobile.png",
       "sizes": "750x1334",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "Tampilan Mobile JejakCerita App"
+      "label": "Tampilan Mobile Dicoding Story App"
     }
   ],
   "shortcuts": [
     {
-      "name": "Bagikan Cerita",
-      "short_name": "Buat",
-      "description": "Bagikan cerita dan momen lokasi baru",
+      "name": "Add New Story",
+      "short_name": "Add Story",
+      "description": "Tambah cerita baru ke Dicoding Story",
       "url": "./index.html#/add",
       "icons": [
         {
