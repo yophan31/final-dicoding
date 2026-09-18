@@ -1,0 +1,2 @@
+APP_URL=https://christianjh01.github.io/Proyek-Kedua/
+MAP_SERVICE_API_KEY=OpenStreetMap
