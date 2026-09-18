@@ -1,6 +1,6 @@
-const CORE_CACHE_TAG = 'chronogrid-core-v2';
-const API_CACHE_TAG = 'chronogrid-api-v2';
-const MEDIA_CACHE_TAG = 'chronogrid-media-v2';
+const CORE_CACHE_TAG = 'chronogrid-core-v4';
+const API_CACHE_TAG = 'chronogrid-api-v4';
+const MEDIA_CACHE_TAG = 'chronogrid-media-v4';
 
 const ASSET_MANIFEST = [
   './',

@@ -23,6 +23,7 @@ const registerServiceWorker = async () => {
 
   try {
     const swRegistrationResult = await navigator.serviceWorker.register('./sw.js');
+    swRegistrationResult.update();
     console.log('Service Worker registered successfully:', swRegistrationResult);
 
     window.addEventListener('beforeinstallprompt', (installEvent) => {
