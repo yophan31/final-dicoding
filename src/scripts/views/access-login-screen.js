@@ -28,7 +28,7 @@ class AccessLoginScreen {
 
     this._formRef = document.getElementById('access-login-form');
     this._alertBox = document.getElementById('login-alert-box');
-    this._submitBtn = this._formRef.querySelector('button[type="submit"]');
+    this._submitButton = this._formRef.querySelector('button[type="submit"]');
 
     this._formRef.addEventListener('submit', (e) => {
       e.preventDefault();

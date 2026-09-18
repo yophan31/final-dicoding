@@ -32,7 +32,7 @@ class AccessRegisterScreen {
 
     this._formRef = document.getElementById('access-register-form');
     this._alertBox = document.getElementById('register-alert-box');
-    this._submitBtn = this._formRef.querySelector('button[type="submit"]');
+    this._submitButton = this._formRef.querySelector('button[type="submit"]');
 
     this._formRef.addEventListener('submit', (e) => {
       e.preventDefault();
