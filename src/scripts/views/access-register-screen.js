@@ -44,26 +44,38 @@ class AccessRegisterScreen {
   }
 
   renderLoadingState() {
-    this._submitButton.disabled = true;
-    this._submitButton.textContent = 'Registering Identity...';
-    this._alertBox.style.display = 'none';
-    this._alertBox.className = 'status-alert';
+    if (this._submitButton) {
+      this._submitButton.disabled = true;
+      this._submitButton.textContent = 'Registering Identity...';
+    }
+    if (this._alertBox) {
+      this._alertBox.style.display = 'none';
+      this._alertBox.className = 'status-alert';
+    }
   }
 
   renderErrorState(errorText) {
-    this._submitButton.disabled = false;
-    this._submitButton.textContent = 'Create Identity';
-    this._alertBox.textContent = errorText;
-    this._alertBox.className = 'status-alert alert-error';
-    this._alertBox.style.display = 'block';
+    if (this._submitButton) {
+      this._submitButton.disabled = false;
+      this._submitButton.textContent = 'Create Identity';
+    }
+    if (this._alertBox) {
+      this._alertBox.textContent = errorText;
+      this._alertBox.className = 'status-alert alert-error';
+      this._alertBox.style.display = 'block';
+    }
   }
 
   renderSuccessState() {
-    this._submitButton.disabled = false;
-    this._submitButton.textContent = 'Create Identity';
-    this._alertBox.textContent = 'Node registration successful! Redirecting to login...';
-    this._alertBox.className = 'status-alert alert-success';
-    this._alertBox.style.display = 'block';
+    if (this._submitButton) {
+      this._submitButton.disabled = false;
+      this._submitButton.textContent = 'Create Identity';
+    }
+    if (this._alertBox) {
+      this._alertBox.textContent = 'Node registration successful! Redirecting to login...';
+      this._alertBox.className = 'status-alert alert-success';
+      this._alertBox.style.display = 'block';
+    }
     setTimeout(() => {
       window.location.hash = '#/login';
     }, 2000);

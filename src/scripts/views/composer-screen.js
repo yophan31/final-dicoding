@@ -74,36 +74,52 @@ class ComposerScreen {
   }
 
   renderProgress() {
-    this._submitButton.disabled = true;
-    this._submitButton.textContent = 'Transmitting...';
-    this._statusDiv.style.display = 'none';
+    if (this._submitButton) {
+      this._submitButton.disabled = true;
+      this._submitButton.textContent = 'Transmitting...';
+    }
+    if (this._statusDiv) {
+      this._statusDiv.style.display = 'none';
+    }
   }
 
   renderFault(errorMessage) {
-    this._submitButton.disabled = false;
-    this._submitButton.textContent = 'Transmit Chronicle';
-    this._statusDiv.textContent = errorMessage;
-    this._statusDiv.className = 'status-alert alert-error';
-    this._statusDiv.style.display = 'block';
+    if (this._submitButton) {
+      this._submitButton.disabled = false;
+      this._submitButton.textContent = 'Transmit Chronicle';
+    }
+    if (this._statusDiv) {
+      this._statusDiv.textContent = errorMessage;
+      this._statusDiv.className = 'status-alert alert-error';
+      this._statusDiv.style.display = 'block';
+    }
   }
 
   renderSuccess(successMessage = 'Transmission broadcasted successfully!') {
-    this._submitButton.disabled = false;
-    this._submitButton.textContent = 'Transmit Chronicle';
-    this._statusDiv.textContent = successMessage;
-    this._statusDiv.className = 'status-alert alert-success';
-    this._statusDiv.style.display = 'block';
+    if (this._submitButton) {
+      this._submitButton.disabled = false;
+      this._submitButton.textContent = 'Transmit Chronicle';
+    }
+    if (this._statusDiv) {
+      this._statusDiv.textContent = successMessage;
+      this._statusDiv.className = 'status-alert alert-success';
+      this._statusDiv.style.display = 'block';
+    }
     setTimeout(() => {
       window.location.hash = '#/';
     }, 1500);
   }
 
   renderOfflineSuccess() {
-    this._submitButton.disabled = false;
-    this._submitButton.textContent = 'Transmit Chronicle';
-    this._statusDiv.textContent = '⚡ Cached in vault! Transmission will automatically dispatch when cloud connectivity is restored.';
-    this._statusDiv.className = 'status-alert alert-success';
-    this._statusDiv.style.display = 'block';
+    if (this._submitButton) {
+      this._submitButton.disabled = false;
+      this._submitButton.textContent = 'Transmit Chronicle';
+    }
+    if (this._statusDiv) {
+      this._statusDiv.textContent = '⚡ Cached in vault! Transmission will automatically dispatch when cloud connectivity is restored.';
+      this._statusDiv.className = 'status-alert alert-success';
+      this._statusDiv.style.display = 'block';
+    }
     setTimeout(() => {
       window.location.hash = '#/';
     }, 2000);

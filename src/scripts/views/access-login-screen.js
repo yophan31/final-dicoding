@@ -39,21 +39,31 @@ class AccessLoginScreen {
   }
 
   renderLoadingState() {
-    this._submitButton.disabled = true;
-    this._submitButton.textContent = 'Authenticating...';
-    this._alertBox.style.display = 'none';
+    if (this._submitButton) {
+      this._submitButton.disabled = true;
+      this._submitButton.textContent = 'Authenticating...';
+    }
+    if (this._alertBox) {
+      this._alertBox.style.display = 'none';
+    }
   }
 
   renderErrorState(errorText) {
-    this._submitButton.disabled = false;
-    this._submitButton.textContent = 'Authorize Access';
-    this._alertBox.textContent = errorText;
-    this._alertBox.style.display = 'block';
+    if (this._submitButton) {
+      this._submitButton.disabled = false;
+      this._submitButton.textContent = 'Authorize Access';
+    }
+    if (this._alertBox) {
+      this._alertBox.textContent = errorText;
+      this._alertBox.style.display = 'block';
+    }
   }
 
   renderSuccessState() {
-    this._submitButton.disabled = false;
-    this._submitButton.textContent = 'Authorize Access';
+    if (this._submitButton) {
+      this._submitButton.disabled = false;
+      this._submitButton.textContent = 'Authorize Access';
+    }
     window.location.hash = '#/';
   }
 }
